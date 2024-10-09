@@ -1,11 +1,26 @@
 // const http = require("http");
 
 // const myServer = http.createServer((request, response) => {
-//     console.log("My Name is Harsh Patel.");
-//     response.end("Hello");
+//   switch (request.url) {
+//     case "/":
+//       response.end("Welcome To Home Page");
+//       break;
+//     case "/about":
+//       response.end("Welcome To About Page");
+//       break;
+//     case "/contact":
+//       response.end("Welcome To Contact Page");
+//       break;
+
+//     default:
+//       response.end("Not Page Found 404");
+//   }
 // });
 
-// myServer.listen(8000, () => console.log("Server Started"));
+// myServer.listen(8000, () => {
+//   console.log("Server Started");
+// });
+
 
 const http = require("http");
 const fs = require("fs");

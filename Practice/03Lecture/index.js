@@ -22,13 +22,6 @@ fs.renameSync("./text.txt", "./Harsh.txt");
 
 
 
-
-
-
-
-
-
-
 // For Async 👇
 
 // writeFile no use nvi file creat krva mate thay ch
