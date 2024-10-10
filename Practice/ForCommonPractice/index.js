@@ -1,15 +1,46 @@
+// const express = require("express");
+
+// const app = express();
+
+// const port = 8000;
+
+// app.set("view engine" ,"ejs");
+
+// app.get("/",(req,res)=>{
+//     return res.render("index")
+// });
+
+// app.listen(port,()=>{console.log("WoW . . .")});
+
+
+
+
+
 const express = require("express");
 
 const app = express();
+const PORT = 7320;
 
-const port = 5400;
 
-app.get("/",(req,res)=>{
-    res.send("Welcome to Home Page . . . ");
+app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+
+
+let records = [];
+
+
+app.get("/", (req, res) => {
+  return res.render("index", { records });
+});
+
+
+app.post("/add", (req, res)=>{
+    const newRecord = req.body.record
+    records.push(newRecord)    
+    res.redirect("/")
 })
 
-app.get("/about",(req,res)=>{
-    res.send(`Welcome to About Page ${req.query.name} . My Age is  ${req.query.age} . `);
-})
 
-app.listen(port,()=>{console.log("✅")})
+app.listen(PORT, () => {
+  console.log("Server Started");
+});

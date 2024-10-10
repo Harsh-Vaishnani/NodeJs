@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(238, 203, 144);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Home Page 👇✅➕</h1>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Array Records</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: crimson;
+        color: aliceblue;
+      }
+      .container {
+        width: 90%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Static Array Records</h1>
+      <form action="/add" method="post">
+        <input type="text" name="record" required />
+        <button type="submit">Add Record</button>
+      </form>
+
+      <ul>
+        <% records.forEach((record) => { %>
+        <li><%= record %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
